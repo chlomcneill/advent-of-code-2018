@@ -1,12 +1,11 @@
-def frequency_change():
-    initial_frequency = 0
-    frequencies = []
-    f = open("/Users/mcneillc/Documents/advent-of-code-2018/Day 1/Day1input.txt","r")
-    for line in f:
-        frequencies.append(line)
-    f.close()
-    for frequency in frequencies:
-        initial_frequency += int(frequency)
-    return initial_frequency
+current_frequency = 0
+frequency_changes = []
 
-print(frequency_change())
+f = open("/Users/mcneillc/Documents/advent-of-code-2018/Day 1/Day1input.txt","r")
+for line in f:
+    frequency_changes.append(line)
+f.close()
+
+for change in frequency_changes:
+    current_frequency += int(change)
+print(current_frequency)
