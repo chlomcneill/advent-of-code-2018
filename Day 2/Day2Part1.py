@@ -16,11 +16,8 @@ def letter_repeats_exactly_3_times(n):
             repeats.append(letter)
             return repeats
 
-IDs = []
-
 f = open("/Users/mcneillc/Documents/advent-of-code-2018/Day 2/Day2input.txt","r")
-for line in f:
-    IDs.append(line)
+IDs = f.readlines()
 f.close()
 
 IDs = [ID.strip('\n') for ID in IDs]

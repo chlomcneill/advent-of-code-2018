@@ -11,11 +11,8 @@ def differ_by_1_char(a, b):
     else:
         return False
 
-IDs = []
-
 f = open("/Users/mcneillc/Documents/advent-of-code-2018/Day 2/Day2input.txt","r")
-for line in f:
-    IDs.append(line)
+IDs = f.readlines()
 f.close()
 
 IDs = [ID.strip('\n') for ID in IDs]
