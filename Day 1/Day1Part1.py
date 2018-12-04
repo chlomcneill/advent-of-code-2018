@@ -1,5 +1,3 @@
-import re 
-
 def frequency_change():
     initial_frequency = 0
     frequencies = []
@@ -8,10 +6,7 @@ def frequency_change():
         frequencies.append(line)
     f.close()
     for frequency in frequencies:
-        if frequency[0] == '+':
-            initial_frequency += int(re.sub('[^0-9]','',frequency))
-        elif frequency[0] == '-':
-            initial_frequency -= int(re.sub('[^0-9]','',frequency))
+        initial_frequency += int(frequency)
     return initial_frequency
 
 print(frequency_change())
