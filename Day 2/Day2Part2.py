@@ -11,25 +11,26 @@ def differ_by_1_char(a, b):
     else:
         return False
 
-def ID_scan():
-    IDs = []
-    f = open("/Users/mcneillc/Documents/advent-of-code-2018/Day 2/Day2input.txt","r")
-    for line in f:
-        IDs.append(line)
-    f.close()
-    IDs = [ID.strip('\n') for ID in IDs]
+IDs = []
 
-    correct_box_IDs = []
-    for ID1, ID2 in it.combinations(IDs, 2):
-        if differ_by_1_char(ID1, ID2) == True:
-            correct_box_IDs.extend([ID1, ID2])
+f = open("/Users/mcneillc/Documents/advent-of-code-2018/Day 2/Day2input.txt","r")
+for line in f:
+    IDs.append(line)
+f.close()
 
-    result = ''
-    a = correct_box_IDs[0]
-    b = correct_box_IDs[1]
-    for i in range(len(a)):
-        if a[i] == b[i]:
-            result += a[i]
-    return result
+IDs = [ID.strip('\n') for ID in IDs]
 
-print(ID_scan())
+correct_box_IDs = []
+for ID1, ID2 in it.combinations(IDs, 2):
+    if differ_by_1_char(ID1, ID2) == True:
+        correct_box_IDs.extend([ID1, ID2])
+
+result = ''
+a = correct_box_IDs[0]
+b = correct_box_IDs[1]
+
+for i in range(len(a)):
+    if a[i] == b[i]:
+        result += a[i]
+        
+print(result)
