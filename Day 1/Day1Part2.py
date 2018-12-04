@@ -4,7 +4,7 @@ import itertools as it
 def frequency_change():
     frequency_tracker = 0
     frequencies = []
-    f = open("/Users/mcneillc/Documents/Advent of Code/Day 1/Day1input.txt","r")
+    f = open("/Users/mcneillc/Documents/advent-of-code-2018/Day 1/Day1input.txt","r")
     for line in f:
         frequencies.append(line)
     f.close()
